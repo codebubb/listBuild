@@ -1,10 +1,15 @@
-/* Utility helpers to build lists from external data sources */
+/* 	
+	listBuild.js
+	------------
+	Utility helpers to build HTML <ul> elements from data sources 
+	Works in browser or node
+	
+	Version: 0.1.0 
+	Author: James Bubb */
 
 var isNode = typeof window === 'undefined';
 
-var build = function(items, className){
-	// Returns a <ul> with the included items
-	
+var buildList = function(items, className){
 	var li = [];
 	var ul = isNode ? '<ul>\n' : document.createElement('ul') ;
 	if (className){	
